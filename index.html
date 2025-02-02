@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <nav id="navbar">
+        <ul><li><a href="#home">Home</a></li></ul>
+                <ul><li><a href="#recipes">Recipes</a></li></ul>
+    </nav>
+
+    <section id="home" >
+        <p>Welcome to Recipe Finder</p>
+        <h1> Masala & Mozzarella 🍽️ </h1>
+        <br><br>
+        <p>That blends the bold, fiery spices of India with the rich, creamy flavors of international cuisine!</p>
+        <p>Find the best recipes based on your ingredients, cuisine, or cooking time.</p>
+        <p>Explore global flavors while keeping that desi touch alive!</p>
+    </section>
+
+    <section id="recipes">
+        <h2 style="margin-top: 0px;">Search Recipes</h2>
+
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search by ingredient / name...">
+            
+            <select id="cuisine-filter">
+                <option value="">All Cuisines</option>
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="Chinese">Chinese</option>
+            </select>
+            
+            <select id="time-filter">
+                <option value="">All Cooking Times</option>
+                <option value="15">Under 15 min</option>
+                <option value="30">Under 30 min</option>
+                <option value="60">Under 1 hour</option>
+            </select>
+            
+            <button onclick="applyFilters()">Search</button>
+        </div>
+
+        <div id="recipe-list" class="recipe-list"></div>
+    </section>
+
+</body>
+</html>
